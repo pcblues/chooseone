@@ -1,9 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
-using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.LifecycleEvents;
-using Microsoft.Maui.Platform;
-using Microsoft.UI.Windowing;
+using ChooseOne.Data;
+using ChooseOne.Views;
+
+
+#if WINDOWS
 using Windows.Graphics;
+#endif
+
 
 namespace ChooseOne
 {
@@ -55,6 +59,11 @@ namespace ChooseOne
                 });
             });
 #endif
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<ListPage>();
+            builder.Services.AddTransient<ProjectItemPage>();
+            
+            builder.Services.AddSingleton<ChooseItemDatabase>();
 
             return builder.Build();
         }

@@ -1,10 +1,12 @@
-﻿namespace ChooseOne
+﻿using ChooseOne.Views;
+
+namespace ChooseOne;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        Routing.RegisterRoute(nameof(ProjectItemPage), typeof(ProjectItemPage));
     }
 }

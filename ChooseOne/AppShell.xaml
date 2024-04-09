@@ -3,12 +3,12 @@
     x:Class="ChooseOne.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ChooseOne"
+    xmlns:local="clr-namespace:ChooseOne.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="ChooseOne">
     <TabBar>
 
-    <ShellContent
+        <ShellContent
         Title="Choose"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />

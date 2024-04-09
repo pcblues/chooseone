@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChooseOne.Views.ProjectItemPage"
+             xmlns:models="clr-namespace:ChooseOne.Models"
+             x:DataType="models:ProjectItem"             
+             Title="{Binding Project}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Project" />
+            <Entry Text="{Binding Project}" />
+
+            <Label Text="Weight" />
+            <Entry Text="{Binding Weight}" />
+            <Button Text="Save"
+                    Clicked="OnSaveClicked"  Margin="5"/>
+            <Button Text="Delete"
+                    Clicked="OnDeleteClicked"  Margin="5"/>
+            <Button Text="Cancel"
+                    Clicked="OnCancelClicked" Margin="5" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
