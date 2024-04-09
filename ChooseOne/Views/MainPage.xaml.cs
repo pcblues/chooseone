@@ -37,11 +37,13 @@ public partial class MainPage : ContentPage
                 itemList.Add(item.Project);
             }
         }
-        
-        Random rnd = new Random();
-        int index = rnd.Next(totalWeight);
-        result = itemList[index];
-        CounterBtn.Text = result;
-        SemanticScreenReader.Announce(CounterBtn.Text);
+        if (itemList.Count > 0)
+        {
+            Random rnd = new Random();
+            int index = rnd.Next(totalWeight);
+            result = itemList[index];
+            CounterBtn.Text = result;
+            SemanticScreenReader.Announce(CounterBtn.Text);
+        }
     }
 }
